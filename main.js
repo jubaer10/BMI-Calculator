@@ -2,12 +2,12 @@
 
 var weight, height, measure, bmi, error ;
 
-function calculate() {
+function calculateBtn() {
 	weight = document.getElementById("weight").value;
 	height = document.getElementById("height").value;
 	error = "Please enter some values";
-	height /= 100;
-	height *= height;
+	height %= 10;
+	height *= height
 	bmi = weight/height;
 	bmi = bmi.toFixed(1);
 
@@ -23,15 +23,15 @@ function calculate() {
 	
 
 	if (weight === 0 ) {
-		document.getElementById("results").innerHTML = error;
+		document.getElementById("result").innerHTML = error;
 	} else if (height === 0){
-		document.getElementById("results").innerHTML = error;
+		document.getElementById("result").innerHTML = error;
 	}
 	 else {
 
-		document.getElementById("results").innerHTML = measure;
+		document.getElementById("result").innerHTML = measure;
 	}
 	if (weight < 0) {
-		document.getElementById("results").innerHTML = "Negative Values not Allowed";
+		document.getElementById("result").innerHTML = "Negative Values not Allowed";
 	}
 }
